@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --animate-slow-zoom: slow-zoom 20s ease-in-out infinite alternate;
+  
+  @keyframes slow-zoom {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.15); }
+  }
+}
+
+dialog::backdrop {
+  background-color: rgba(28, 25, 23, 0.7);
+  backdrop-filter: blur(8px);
+}

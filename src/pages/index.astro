@@ -1,0 +1,307 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "RoofingContractor",
+  "name": "Ready Roofing Georgia",
+  "image": "https://www.readyroofinggeorgia.com/images/atlanta-roofing-hero-background.jpg",
+  "url": "https://www.readyroofinggeorgia.com/",
+  "telephone": "+1-555-019-8472",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "123 Main St",
+    "addressLocality": "Atlanta",
+    "addressRegion": "GA",
+    "postalCode": "30301",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 33.7490,
+    "longitude": -84.3880
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "opens": "08:00",
+    "closes": "18:00"
+  },
+  "sameAs": [
+    "https://www.facebook.com/readyroofinggeorgia",
+    "https://twitter.com/readyroofingga"
+  ]
+};
+---
+
+<Layout title="Ready Roofing Georgia | Premier Atlanta Roofing Contractor" description="Top-rated roofing contractor in Georgia. Expert roof repairs, replacements, and storm damage restoration for residential and commercial properties.">
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(schema)} />
+
+  <!-- Sticky Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-stone-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div class="flex-shrink-0 flex items-center">
+        <span class="text-2xl font-black text-stone-900 tracking-tight uppercase">Ready<span class="text-blue-600">Roofing</span></span>
+      </div>
+      <div class="flex items-center space-x-4">
+        <a href="tel:+15550198472" class="hidden sm:inline-flex items-center px-4 py-2 border-2 border-blue-600 text-blue-600 font-bold rounded-lg hover:bg-blue-50 transition-colors">
+          <svg class="w-5 h-5 mr-2 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+          </svg>
+          Call Now
+        </a>
+        <a href="#quote" class="inline-flex items-center px-6 py-2.5 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5">
+          Get a Quote
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Cinematic Hero -->
+  <section class="relative h-[90vh] min-h-[600px] overflow-hidden flex items-center justify-center">
+    <div class="absolute inset-0 z-0">
+      <img src="images/atlanta-roofing-hero-background.jpg" alt="Premium residential roofing installation in Atlanta, Georgia" class="w-full h-full object-cover animate-slow-zoom" />
+      <div class="absolute inset-0 bg-stone-900/60"></div>
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+      <h1 class="text-5xl md:text-7xl font-black text-white leading-tight mb-6 animate-on-scroll">
+        Atlanta's Most Trusted <br class="hidden md:block"/> <span class="text-blue-400">Roofing Experts</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-stone-200 mb-10 max-w-2xl mx-auto font-medium animate-on-scroll" style="transition-delay: 200ms;">
+        Storm damage? Aging shingles? We provide top-tier residential and commercial roofing solutions designed to withstand unpredictable Georgia weather.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 animate-on-scroll" style="transition-delay: 400ms;">
+        <a href="#quote" class="px-8 py-4 bg-blue-600 text-white text-lg font-bold rounded-lg hover:bg-blue-700 shadow-2xl transition-all transform hover:scale-105 w-full sm:w-auto">
+          Schedule Free Inspection
+        </a>
+        <a href="#services" class="px-8 py-4 bg-white text-stone-900 text-lg font-bold rounded-lg hover:bg-stone-100 shadow-2xl transition-all transform hover:scale-105 w-full sm:w-auto">
+          View Our Services
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-24 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+        <h2 class="text-4xl font-black text-stone-900 mb-4">Our Roofing Services</h2>
+        <p class="text-lg text-stone-600">Comprehensive, professional, and reliable roofing solutions tailored to your property's exact needs.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Service Card 1 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow cursor-pointer animate-on-scroll" onclick="document.getElementById('modal-residential').showModal()">
+          <div class="h-48 overflow-hidden bg-stone-200">
+            <img src="images/architectural-shingles-repair.jpg" alt="Expert architectural shingle roof installation and repair" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" onerror="this.style.display='none'" />
+          </div>
+          <div class="p-8">
+            <h3 class="text-2xl font-bold text-stone-900 mb-3">Residential Roofing</h3>
+            <p class="text-stone-600 mb-4">Premium shingle, metal, and tile roofing replacements ensuring long-lasting curb appeal and structural integrity.</p>
+            <span class="text-blue-600 font-bold flex items-center hover:text-blue-800 transition-colors">
+              Learn More 
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </span>
+          </div>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow cursor-pointer animate-on-scroll" style="transition-delay: 200ms;" onclick="document.getElementById('modal-storm').showModal()">
+          <div class="h-48 overflow-hidden bg-stone-200">
+            <img src="images/storm-damage-inspection.jpg" alt="Professional post-storm roof inspection and emergency tarping" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" onerror="this.style.display='none'" />
+          </div>
+          <div class="p-8">
+            <h3 class="text-2xl font-bold text-stone-900 mb-3">Storm Damage Repair</h3>
+            <p class="text-stone-600 mb-4">Rapid response emergency tarping, hail damage assessments, and comprehensive insurance claim assistance.</p>
+            <span class="text-blue-600 font-bold flex items-center hover:text-blue-800 transition-colors">
+              Learn More 
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </span>
+          </div>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow cursor-pointer animate-on-scroll" style="transition-delay: 400ms;" onclick="document.getElementById('modal-commercial').showModal()">
+          <div class="h-48 overflow-hidden bg-stone-200">
+            <img src="images/commercial-roof-coating.jpg" alt="Durable flat roof coatings and commercial roofing solutions" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" onerror="this.style.display='none'" />
+          </div>
+          <div class="p-8">
+            <h3 class="text-2xl font-bold text-stone-900 mb-3">Commercial Roofing</h3>
+            <p class="text-stone-600 mb-4">TPO, EPDM, and specialized elastomeric coatings designed to protect large-scale industrial and retail properties.</p>
+            <span class="text-blue-600 font-bold flex items-center hover:text-blue-800 transition-colors">
+              Learn More 
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modals (Native HTML <dialog>) -->
+  
+  <dialog id="modal-residential" class="fixed inset-0 m-auto w-11/12 max-w-2xl bg-white rounded-2xl shadow-2xl p-0 open:animate-in open:fade-in open:zoom-in-95 backdrop:bg-stone-900/80 backdrop:backdrop-blur-sm">
+    <div class="relative">
+      <button class="absolute top-4 right-4 p-2 bg-white/80 backdrop-blur-md rounded-full hover:bg-white transition-colors z-10 shadow-sm" onclick="document.getElementById('modal-residential').close()" aria-label="Close modal">
+        <svg class="w-6 h-6 text-stone-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+      <div class="bg-stone-200 w-full h-64">
+          <img src="images/architectural-shingles-repair.jpg" alt="Detailed view of architectural shingles on an Atlanta home" class="w-full h-64 object-cover" onerror="this.style.display='none'" />
+      </div>
+      <div class="p-8 max-h-[60vh] overflow-y-auto">
+        <h3 class="text-3xl font-black text-stone-900 mb-6">Residential Roof Replacements</h3>
+        <div class="space-y-4 text-stone-700 leading-relaxed text-lg">
+          <p>
+            When it comes to safeguarding your Atlanta home, settling for subpar materials is not an option. Our comprehensive residential roofing services focus on utilizing top-tier, impact-resistant architectural shingles designed specifically to withstand the brutal heat and unpredictable storm seasons of the Southeast. We go beyond simple re-roofing; we conduct deep structural assessments to ensure your decking, flashing, and underlayment form a completely watertight barrier against the elements.
+          </p>
+          <p>
+            Our expert installation teams are rigorously trained and certified by leading manufacturers like GAF and Owens Corning. This dedication to craftsmanship allows us to offer extended, transferrable warranties that provide true peace of mind. From the initial tear-off to the final magnetic sweep for stray nails, our process is built around respecting your property and minimizing disruption to your daily life.
+          </p>
+          <p>
+            Whether your current roof has reached the end of its natural lifespan or you simply want to dramatically boost your property's curb appeal before selling, Ready Roofing provides a tailored approach. We offer an extensive palette of shingle styles and colors, meticulously matched to your home's architectural character, ensuring that your new roof is both incredibly durable and undeniably beautiful.
+          </p>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="modal-storm" class="fixed inset-0 m-auto w-11/12 max-w-2xl bg-white rounded-2xl shadow-2xl p-0 open:animate-in open:fade-in open:zoom-in-95 backdrop:bg-stone-900/80 backdrop:backdrop-blur-sm">
+    <div class="relative">
+      <button class="absolute top-4 right-4 p-2 bg-white/80 backdrop-blur-md rounded-full hover:bg-white transition-colors z-10 shadow-sm" onclick="document.getElementById('modal-storm').close()" aria-label="Close modal">
+        <svg class="w-6 h-6 text-stone-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+      <div class="bg-stone-200 w-full h-64">
+          <img src="images/storm-damage-inspection.jpg" alt="Roof inspector examining hail and wind damage on shingles" class="w-full h-64 object-cover" onerror="this.style.display='none'" />
+      </div>
+      <div class="p-8 max-h-[60vh] overflow-y-auto">
+        <h3 class="text-3xl font-black text-stone-900 mb-6">Emergency Storm Damage Restoration</h3>
+        <div class="space-y-4 text-stone-700 leading-relaxed text-lg">
+          <p>
+            Georgia's fierce spring thunderstorms and late-summer hurricanes can inflict severe, sometimes hidden, damage to your roofing system in mere minutes. High-velocity wind uplift can break shingle seals, while heavy hail impacts fracture the fiberglass matting beneath the protective granules. Left unaddressed, these compromised areas rapidly degrade into extensive leaks, leading to costly structural rot and indoor mold remediation.
+          </p>
+          <p>
+            Ready Roofing operates an elite, rapid-response storm assessment team. We deploy immediately post-storm to provide emergency tarping and critical temporary dry-in services, mitigating any further water intrusion. Our comprehensive inspections utilize advanced drone technology and thermal imaging to document every single point of impact, ensuring no hairline fracture is overlooked during the evaluation process.
+          </p>
+          <p>
+            Navigating homeowner's insurance claims can be a frustrating and confusing ordeal. We act as your dedicated advocate throughout the entire process. By providing your adjuster with irrefutable, high-definition photographic evidence and deeply detailed line-item repair estimates, we aggressively fight to ensure your insurance company fully covers the restoration of your roof to its pre-storm condition, protecting your most valuable asset.
+          </p>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="modal-commercial" class="fixed inset-0 m-auto w-11/12 max-w-2xl bg-white rounded-2xl shadow-2xl p-0 open:animate-in open:fade-in open:zoom-in-95 backdrop:bg-stone-900/80 backdrop:backdrop-blur-sm">
+    <div class="relative">
+      <button class="absolute top-4 right-4 p-2 bg-white/80 backdrop-blur-md rounded-full hover:bg-white transition-colors z-10 shadow-sm" onclick="document.getElementById('modal-commercial').close()" aria-label="Close modal">
+        <svg class="w-6 h-6 text-stone-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+      <div class="bg-stone-200 w-full h-64">
+          <img src="images/commercial-roof-coating.jpg" alt="Application of reflective elastomeric coating on a flat commercial roof" class="w-full h-64 object-cover" onerror="this.style.display='none'" />
+      </div>
+      <div class="p-8 max-h-[60vh] overflow-y-auto">
+        <h3 class="text-3xl font-black text-stone-900 mb-6">Commercial Flat Roof Systems</h3>
+        <div class="space-y-4 text-stone-700 leading-relaxed text-lg">
+          <p>
+            Protecting inventory, expensive equipment, and maintaining a safe environment for your employees demands a commercial roofing system that absolutely cannot fail. We specialize in the installation, preventative maintenance, and long-term restoration of flat and low-slope roofing systems for warehouses, retail plazas, and industrial facilities across the greater Atlanta metropolitan area.
+          </p>
+          <p>
+            Our commercial division is highly proficient in modern single-ply membrane systems, including TPO (Thermoplastic Polyolefin) and EPDM (Ethylene Propylene Diene Terpolymer). These advanced membranes offer exceptional puncture resistance, extreme longevity, and highly reflective white surfaces that dramatically reduce your building's HVAC cooling costs during scorching Southern summers, lowering your overhead.
+          </p>
+          <p>
+            For aging flat roofs that are not yet ready for a complete, costly tear-off, we offer highly economical elastomeric roof coating restorations. These seamless, fluid-applied systems bridge existing cracks, encapsulate the entire roof surface, and can reliably extend the watertight life of your commercial property by up to 15 years, backed by robust manufacturer warranties that safeguard your business's bottom line.
+          </p>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- FAQ Section -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+        <h2 class="text-4xl font-black text-stone-900 mb-4">Frequently Asked Questions</h2>
+        <p class="text-lg text-stone-600">Got questions? We've got answers. Click below to learn more about our process and policies.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <!-- FAQ Card 1 -->
+        <div class="bg-stone-50 border border-stone-200 rounded-xl p-6 cursor-pointer hover:bg-stone-100 transition-colors animate-on-scroll" onclick="document.getElementById('modal-faq-cost').showModal()">
+          <div class="flex justify-between items-center">
+            <h3 class="text-xl font-bold text-stone-900">How much does a new roof cost in Atlanta?</h3>
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+          </div>
+        </div>
+
+        <!-- FAQ Card 2 -->
+        <div class="bg-stone-50 border border-stone-200 rounded-xl p-6 cursor-pointer hover:bg-stone-100 transition-colors animate-on-scroll" style="transition-delay: 100ms;" onclick="document.getElementById('modal-faq-insurance').showModal()">
+          <div class="flex justify-between items-center">
+            <h3 class="text-xl font-bold text-stone-900">Do you help with insurance claims?</h3>
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Modals -->
+  <dialog id="modal-faq-cost" class="fixed inset-0 m-auto w-11/12 max-w-2xl bg-white rounded-2xl shadow-2xl p-0 open:animate-in open:fade-in open:zoom-in-95 backdrop:bg-stone-900/80 backdrop:backdrop-blur-sm">
+    <div class="relative p-8 pt-12">
+      <button class="absolute top-4 right-4 p-2 bg-stone-100 rounded-full hover:bg-stone-200 transition-colors" onclick="document.getElementById('modal-faq-cost').close()" aria-label="Close modal">
+        <svg class="w-6 h-6 text-stone-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+      <h3 class="text-3xl font-black text-stone-900 mb-6">Determining the Cost of Your New Roof</h3>
+      <div class="space-y-4 text-stone-700 leading-relaxed text-lg max-h-[60vh] overflow-y-auto">
+        <p>
+          The cost of a roof replacement in the Atlanta area is highly variable and depends on several critical factors. It's impossible to give a highly accurate quote without a thorough, on-site inspection. Key variables include the total square footage of your roof, the pitch or steepness of the slopes, the complexity of the architectural design (valleys, dormers, skylights), and the specific type of materials you choose to install.
+        </p>
+        <p>
+          For example, a standard 3-tab asphalt shingle will be more budget-friendly upfront compared to premium architectural shingles, metal standing seam roofs, or synthetic slate. However, premium materials often carry significantly longer warranties, better wind resistance ratings, and can increase your home's resale value, making them a smarter long-term investment for many Georgia homeowners.
+        </p>
+        <p>
+          At Ready Roofing, we believe in complete transparency. We provide a complimentary, comprehensive inspection followed by a detailed, line-item estimate. There are no hidden fees or surprise upcharges. We also offer flexible financing options to ensure you can afford the protection your home requires without breaking your budget.
+        </p>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="modal-faq-insurance" class="fixed inset-0 m-auto w-11/12 max-w-2xl bg-white rounded-2xl shadow-2xl p-0 open:animate-in open:fade-in open:zoom-in-95 backdrop:bg-stone-900/80 backdrop:backdrop-blur-sm">
+    <div class="relative p-8 pt-12">
+      <button class="absolute top-4 right-4 p-2 bg-stone-100 rounded-full hover:bg-stone-200 transition-colors" onclick="document.getElementById('modal-faq-insurance').close()" aria-label="Close modal">
+        <svg class="w-6 h-6 text-stone-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+      <h3 class="text-3xl font-black text-stone-900 mb-6">Navigating Storm Damage Insurance Claims</h3>
+      <div class="space-y-4 text-stone-700 leading-relaxed text-lg max-h-[60vh] overflow-y-auto">
+        <p>
+          Yes, we absolutely assist with homeowner's insurance claims, and in fact, it is one of our primary specialties. Dealing with insurance adjusters after a severe Georgia hailstorm or wind event can be overwhelmingly stressful for the average homeowner. Our experienced team steps in as your expert advocate to ensure the process is as smooth, fair, and successful as possible.
+        </p>
+        <p>
+          The process begins with our highly detailed preliminary inspection. We document all storm-related damage—including lifted shingles, hail bruising, damaged flashing, and collateral damage to gutters or siding—using comprehensive photography and industry-standard reporting software. We then meet with your insurance adjuster directly on-site to walk the roof together, ensuring they see every piece of damage we have uncovered before they write their report.
+        </p>
+        <p>
+          We fluently speak the language of insurance carriers. We review their provided estimate (the scope of loss) to verify that all necessary materials, local building code upgrades, and current market labor rates are accurately represented. If they have missed critical components, we submit detailed supplements to fight for the total amount required to restore your roof properly.
+        </p>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-blue-600 text-white">
+    <div class="max-w-4xl mx-auto px-4 text-center animate-on-scroll">
+      <h2 class="text-4xl font-black mb-6">Ready to Secure Your Home?</h2>
+      <p class="text-xl text-blue-100 mb-10">Don't wait for a small leak to become a massive problem. Get a free, no-obligation inspection from Atlanta's most trusted roofing experts today.</p>
+      <a href="tel:+15550198472" class="inline-flex items-center px-10 py-5 bg-white text-blue-600 text-xl font-bold rounded-xl hover:bg-stone-50 shadow-2xl transition-transform transform hover:scale-105">
+        <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+        </svg>
+        Call +1 (555) 019-8472
+      </a>
+    </div>
+  </section>
+
+</Layout>

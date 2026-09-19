@@ -1,0 +1,54 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<slot name="head" />
+	</head>
+	<body class="bg-white text-stone-900 antialiased overflow-x-hidden">
+		<slot />
+		
+		<script>
+			// Intersection Observer for scroll animations
+			const observerOptions = {
+				root: null,
+				rootMargin: '0px',
+				threshold: 0.1
+			};
+
+			const observer = new IntersectionObserver((entries, observer) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('opacity-100', 'translate-y-0');
+						entry.target.classList.remove('opacity-0', 'translate-y-8');
+						observer.unobserve(entry.target);
+					}
+				});
+			}, observerOptions);
+
+			document.addEventListener('DOMContentLoaded', () => {
+				const animateElements = document.querySelectorAll('.animate-on-scroll');
+				animateElements.forEach(el => {
+					// Setup initial state
+					el.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-1000', 'ease-out');
+					observer.observe(el);
+				});
+			});
+		</script>
+	</body>
+</html>
