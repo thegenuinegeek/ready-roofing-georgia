@@ -265,51 +265,149 @@ const schema = {
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
         <!-- Team Member 1 -->
-        <div class="text-center animate-on-scroll">
-          <div class="w-40 h-40 mx-auto rounded-full overflow-hidden mb-4 shadow-lg border-4 border-stone-50">
+        <div class="text-center animate-on-scroll cursor-pointer group" onclick="document.getElementById('modal-camden').showModal()">
+          <div class="w-40 h-40 mx-auto rounded-full overflow-hidden mb-4 shadow-lg border-4 border-stone-50 group-hover:scale-105 transition-transform">
             <img src="images/ready-roofing-camden-cunningham.jpg" alt="Camden Cunningham" class="w-full h-full object-cover" onerror="this.style.display='none'" />
           </div>
-          <h3 class="text-xl font-bold text-stone-900">Camden Cunningham</h3>
+          <h3 class="text-xl font-bold text-stone-900 group-hover:text-blue-600 transition-colors">Camden Cunningham</h3>
           <p class="text-blue-600 font-medium">Sales Representative</p>
         </div>
 
         <!-- Team Member 2 -->
-        <div class="text-center animate-on-scroll" style="transition-delay: 100ms;">
-          <div class="w-40 h-40 mx-auto rounded-full overflow-hidden mb-4 shadow-lg border-4 border-stone-50">
+        <div class="text-center animate-on-scroll cursor-pointer group" style="transition-delay: 100ms;" onclick="document.getElementById('modal-bruce').showModal()">
+          <div class="w-40 h-40 mx-auto rounded-full overflow-hidden mb-4 shadow-lg border-4 border-stone-50 group-hover:scale-105 transition-transform">
             <img src="images/Bruce-Vance-ReadyRoofing.jpg" alt="Bruce Vance" class="w-full h-full object-cover" onerror="this.style.display='none'" />
           </div>
-          <h3 class="text-xl font-bold text-stone-900">Bruce Vance</h3>
-          <p class="text-blue-600 font-medium">Roofing Specialist</p>
+          <h3 class="text-xl font-bold text-stone-900 group-hover:text-blue-600 transition-colors">Bruce Vance</h3>
+          <p class="text-blue-600 font-medium">Sales Representative</p>
         </div>
 
         <!-- Team Member 3 -->
-        <div class="text-center animate-on-scroll" style="transition-delay: 200ms;">
-          <div class="w-40 h-40 mx-auto rounded-full overflow-hidden mb-4 shadow-lg border-4 border-stone-50">
+        <div class="text-center animate-on-scroll cursor-pointer group" style="transition-delay: 200ms;" onclick="document.getElementById('modal-caden').showModal()">
+          <div class="w-40 h-40 mx-auto rounded-full overflow-hidden mb-4 shadow-lg border-4 border-stone-50 group-hover:scale-105 transition-transform">
             <img src="images/CadenCamp.jpg" alt="Caden Camp" class="w-full h-full object-cover" onerror="this.style.display='none'" />
           </div>
-          <h3 class="text-xl font-bold text-stone-900">Caden Camp</h3>
-          <p class="text-blue-600 font-medium">Roofing Specialist</p>
+          <h3 class="text-xl font-bold text-stone-900 group-hover:text-blue-600 transition-colors">Caden Camp</h3>
+          <p class="text-blue-600 font-medium">Field Supervisor</p>
         </div>
 
         <!-- Team Member 4 -->
-        <div class="text-center animate-on-scroll" style="transition-delay: 300ms;">
-          <div class="w-40 h-40 mx-auto rounded-full overflow-hidden mb-4 shadow-lg border-4 border-stone-50">
+        <div class="text-center animate-on-scroll cursor-pointer group" style="transition-delay: 300ms;" onclick="document.getElementById('modal-noah').showModal()">
+          <div class="w-40 h-40 mx-auto rounded-full overflow-hidden mb-4 shadow-lg border-4 border-stone-50 group-hover:scale-105 transition-transform">
             <img src="images/Untitled+design.png" alt="Noah Holcomb" class="w-full h-full object-cover" onerror="this.style.display='none'" />
           </div>
-          <h3 class="text-xl font-bold text-stone-900">Noah Holcomb</h3>
-          <p class="text-blue-600 font-medium">Project Manager</p>
+          <h3 class="text-xl font-bold text-stone-900 group-hover:text-blue-600 transition-colors">Noah Holcomb</h3>
+          <p class="text-blue-600 font-medium">Sales Representative</p>
         </div>
 
         <!-- Team Member 5 -->
-        <div class="text-center animate-on-scroll" style="transition-delay: 400ms;">
-          <div class="w-40 h-40 mx-auto rounded-full overflow-hidden mb-4 shadow-lg border-4 border-stone-50">
+        <div class="text-center animate-on-scroll cursor-pointer group" style="transition-delay: 400ms;" onclick="document.getElementById('modal-drake').showModal()">
+          <div class="w-40 h-40 mx-auto rounded-full overflow-hidden mb-4 shadow-lg border-4 border-stone-50 group-hover:scale-105 transition-transform">
             <img src="images/Untitled+design+%281%29.png" alt="Drake Daughtry" class="w-full h-full object-cover" onerror="this.style.display='none'" />
           </div>
-          <h3 class="text-xl font-bold text-stone-900">Drake Daughtry</h3>
-          <p class="text-blue-600 font-medium">Project Manager</p>
+          <h3 class="text-xl font-bold text-stone-900 group-hover:text-blue-600 transition-colors">Drake Daughtry</h3>
+          <p class="text-blue-600 font-medium">Owner / Operator</p>
         </div>
       </div>
     </div>
+
+    <!-- Team Modals -->
+    <dialog id="modal-camden" class="fixed inset-0 m-auto w-11/12 max-w-lg bg-white rounded-2xl shadow-2xl p-0 open:animate-in open:fade-in open:zoom-in-95 backdrop:bg-stone-900/80 backdrop:backdrop-blur-sm">
+      <div class="relative">
+        <button class="absolute top-4 right-4 p-2 bg-white/80 backdrop-blur-md rounded-full hover:bg-white transition-colors z-10 shadow-sm" onclick="document.getElementById('modal-camden').close()" aria-label="Close modal">
+          <svg class="w-6 h-6 text-stone-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+        <img src="images/ready-roofing-camden-cunningham.jpg" alt="Camden Cunningham" class="w-full max-h-96 object-contain bg-stone-100" onerror="this.style.display='none'" />
+        <div class="p-8 text-center">
+          <h3 class="text-3xl font-black text-stone-900 mb-1">Camden Cunningham</h3>
+          <p class="text-xl text-blue-600 font-medium mb-8">Sales Representative</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="tel:+15550198472" class="inline-flex justify-center items-center px-6 py-3 border-2 border-blue-600 text-blue-600 font-bold rounded-lg hover:bg-blue-50 transition-colors w-full sm:w-auto">Call Now</a>
+            <a href="#quote" class="inline-flex justify-center items-center px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 shadow-lg transition-all w-full sm:w-auto" onclick="document.getElementById('modal-camden').close()">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog id="modal-bruce" class="fixed inset-0 m-auto w-11/12 max-w-lg bg-white rounded-2xl shadow-2xl p-0 open:animate-in open:fade-in open:zoom-in-95 backdrop:bg-stone-900/80 backdrop:backdrop-blur-sm">
+      <div class="relative">
+        <button class="absolute top-4 right-4 p-2 bg-white/80 backdrop-blur-md rounded-full hover:bg-white transition-colors z-10 shadow-sm" onclick="document.getElementById('modal-bruce').close()" aria-label="Close modal">
+          <svg class="w-6 h-6 text-stone-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+        <img src="images/Bruce-Vance-ReadyRoofing.jpg" alt="Bruce Vance" class="w-full max-h-96 object-contain bg-stone-100" onerror="this.style.display='none'" />
+        <div class="p-8 text-center">
+          <h3 class="text-3xl font-black text-stone-900 mb-1">Bruce Vance</h3>
+          <p class="text-xl text-blue-600 font-medium mb-8">Sales Representative</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="tel:+15550198472" class="inline-flex justify-center items-center px-6 py-3 border-2 border-blue-600 text-blue-600 font-bold rounded-lg hover:bg-blue-50 transition-colors w-full sm:w-auto">Call Now</a>
+            <a href="#quote" class="inline-flex justify-center items-center px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 shadow-lg transition-all w-full sm:w-auto" onclick="document.getElementById('modal-bruce').close()">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog id="modal-caden" class="fixed inset-0 m-auto w-11/12 max-w-lg bg-white rounded-2xl shadow-2xl p-0 open:animate-in open:fade-in open:zoom-in-95 backdrop:bg-stone-900/80 backdrop:backdrop-blur-sm">
+      <div class="relative">
+        <button class="absolute top-4 right-4 p-2 bg-white/80 backdrop-blur-md rounded-full hover:bg-white transition-colors z-10 shadow-sm" onclick="document.getElementById('modal-caden').close()" aria-label="Close modal">
+          <svg class="w-6 h-6 text-stone-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+        <img src="images/CadenCamp.jpg" alt="Caden Camp" class="w-full max-h-96 object-contain bg-stone-100" onerror="this.style.display='none'" />
+        <div class="p-8 text-center">
+          <h3 class="text-3xl font-black text-stone-900 mb-1">Caden Camp</h3>
+          <p class="text-xl text-blue-600 font-medium mb-8">Field Supervisor</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="tel:+15550198472" class="inline-flex justify-center items-center px-6 py-3 border-2 border-blue-600 text-blue-600 font-bold rounded-lg hover:bg-blue-50 transition-colors w-full sm:w-auto">Call Now</a>
+            <a href="#quote" class="inline-flex justify-center items-center px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 shadow-lg transition-all w-full sm:w-auto" onclick="document.getElementById('modal-caden').close()">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog id="modal-noah" class="fixed inset-0 m-auto w-11/12 max-w-lg bg-white rounded-2xl shadow-2xl p-0 open:animate-in open:fade-in open:zoom-in-95 backdrop:bg-stone-900/80 backdrop:backdrop-blur-sm">
+      <div class="relative">
+        <button class="absolute top-4 right-4 p-2 bg-white/80 backdrop-blur-md rounded-full hover:bg-white transition-colors z-10 shadow-sm" onclick="document.getElementById('modal-noah').close()" aria-label="Close modal">
+          <svg class="w-6 h-6 text-stone-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+        <img src="images/Untitled+design.png" alt="Noah Holcomb" class="w-full max-h-96 object-contain bg-stone-100" onerror="this.style.display='none'" />
+        <div class="p-8 text-center">
+          <h3 class="text-3xl font-black text-stone-900 mb-1">Noah Holcomb</h3>
+          <p class="text-xl text-blue-600 font-medium mb-8">Sales Representative</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="tel:+15550198472" class="inline-flex justify-center items-center px-6 py-3 border-2 border-blue-600 text-blue-600 font-bold rounded-lg hover:bg-blue-50 transition-colors w-full sm:w-auto">Call Now</a>
+            <a href="#quote" class="inline-flex justify-center items-center px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 shadow-lg transition-all w-full sm:w-auto" onclick="document.getElementById('modal-noah').close()">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog id="modal-drake" class="fixed inset-0 m-auto w-11/12 max-w-2xl bg-white rounded-2xl shadow-2xl p-0 open:animate-in open:fade-in open:zoom-in-95 backdrop:bg-stone-900/80 backdrop:backdrop-blur-sm">
+      <div class="relative">
+        <button class="absolute top-4 right-4 p-2 bg-white/80 backdrop-blur-md rounded-full hover:bg-white transition-colors z-10 shadow-sm" onclick="document.getElementById('modal-drake').close()" aria-label="Close modal">
+          <svg class="w-6 h-6 text-stone-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+        <div class="flex flex-col md:flex-row">
+          <div class="md:w-1/2 bg-stone-100 flex items-center justify-center">
+            <img src="images/Untitled+design+%281%29.png" alt="Drake Daughtry" class="w-full h-full object-cover" onerror="this.style.display='none'" />
+          </div>
+          <div class="md:w-1/2 p-8 flex flex-col justify-center">
+            <h3 class="text-3xl font-black text-stone-900 mb-1">Drake Daughtry</h3>
+            <p class="text-xl text-blue-600 font-medium mb-6">Owner / Operator</p>
+            <div class="space-y-4 text-stone-700 mb-8">
+              <p>
+                As the Owner and Operator of Ready Roofing, Drake brings years of hands-on experience and a passion for excellence to every project. He believes in doing the job right the first time and ensuring every Middle Georgia family has a safe, durable roof over their heads.
+              </p>
+              <p>
+                Under Drake's leadership, the company has built a reputation for complete transparency, honest inspections, and unparalleled customer service in the roofing industry.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4">
+              <a href="tel:+15550198472" class="inline-flex justify-center items-center px-6 py-3 border-2 border-blue-600 text-blue-600 font-bold rounded-lg hover:bg-blue-50 transition-colors">Call Now</a>
+              <a href="#quote" class="inline-flex justify-center items-center px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 shadow-lg transition-all" onclick="document.getElementById('modal-drake').close()">Get a Quote</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </dialog>
   </section>
 
   <!-- FAQ Section -->
