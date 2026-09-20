@@ -59,9 +59,7 @@ const schema = {
           </svg>
           Call Now
         </a>
-        <a href="#quote" class="inline-flex items-center px-6 py-2.5 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5">
-          Get a Quote
-        </a>
+        <a href="#quote" class="inline-flex items-center px-6 py-2.5 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5" onclick="event.preventDefault(); document.getElementById('modal-quote').showModal();">Get a Quote</a>
       </div>
     </div>
   </header>
@@ -80,9 +78,7 @@ const schema = {
         Storm damage? Aging shingles? We provide top-tier residential and commercial roofing solutions designed to withstand unpredictable Georgia weather.
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 animate-on-scroll" style="transition-delay: 400ms;">
-        <a href="#quote" class="px-8 py-4 bg-blue-600 text-white text-lg font-bold rounded-lg hover:bg-blue-700 shadow-2xl transition-all transform hover:scale-105 w-full sm:w-auto">
-          Schedule Free Inspection
-        </a>
+        <a href="#quote" class="px-8 py-4 bg-blue-600 text-white text-lg font-bold rounded-lg hover:bg-blue-700 shadow-2xl transition-all transform hover:scale-105 w-full sm:w-auto" onclick="event.preventDefault(); document.getElementById('modal-quote').showModal();">Schedule Free Inspection</a>
         <a href="#services" class="px-8 py-4 bg-white text-stone-900 text-lg font-bold rounded-lg hover:bg-stone-100 shadow-2xl transition-all transform hover:scale-105 w-full sm:w-auto">
           View Our Services
         </a>
@@ -334,7 +330,7 @@ const schema = {
             </div>
             <div class="flex flex-col gap-4">
               <a href="tel:+15550198472" class="inline-flex justify-center items-center px-6 py-3 border-2 border-blue-600 text-blue-600 font-bold rounded-lg hover:bg-blue-50 transition-colors">Call Now</a>
-              <a href="#quote" class="inline-flex justify-center items-center px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 shadow-lg transition-all" onclick="document.getElementById('modal-drake').close()">Get a Quote</a>
+              <a href="#quote" class="inline-flex justify-center items-center px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 shadow-lg transition-all" onclick="event.preventDefault(); document.getElementById('modal-drake').close(); document.getElementById('modal-quote').showModal();">Get a Quote</a>
             </div>
           </div>
         </div>
@@ -352,7 +348,7 @@ const schema = {
           <p class="text-xl text-blue-600 font-medium mb-8">Field Supervisor</p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+15550198472" class="inline-flex justify-center items-center px-6 py-3 border-2 border-blue-600 text-blue-600 font-bold rounded-lg hover:bg-blue-50 transition-colors w-full sm:w-auto">Call Now</a>
-            <a href="#quote" class="inline-flex justify-center items-center px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 shadow-lg transition-all w-full sm:w-auto" onclick="document.getElementById('modal-caden').close()">Get a Quote</a>
+            <a href="#quote" class="inline-flex justify-center items-center px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 shadow-lg transition-all w-full sm:w-auto" onclick="event.preventDefault(); document.getElementById('modal-caden').close(); document.getElementById('modal-quote').showModal();">Get a Quote</a>
           </div>
         </div>
       </div>
@@ -369,7 +365,7 @@ const schema = {
           <p class="text-xl text-blue-600 font-medium mb-8">Sales Representative</p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+15550198472" class="inline-flex justify-center items-center px-6 py-3 border-2 border-blue-600 text-blue-600 font-bold rounded-lg hover:bg-blue-50 transition-colors w-full sm:w-auto">Call Now</a>
-            <a href="#quote" class="inline-flex justify-center items-center px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 shadow-lg transition-all w-full sm:w-auto" onclick="document.getElementById('modal-noah').close()">Get a Quote</a>
+            <a href="#quote" class="inline-flex justify-center items-center px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 shadow-lg transition-all w-full sm:w-auto" onclick="event.preventDefault(); document.getElementById('modal-noah').close(); document.getElementById('modal-quote').showModal();">Get a Quote</a>
           </div>
         </div>
       </div>
@@ -386,7 +382,7 @@ const schema = {
           <p class="text-xl text-blue-600 font-medium mb-8">Sales Representative</p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+15550198472" class="inline-flex justify-center items-center px-6 py-3 border-2 border-blue-600 text-blue-600 font-bold rounded-lg hover:bg-blue-50 transition-colors w-full sm:w-auto">Call Now</a>
-            <a href="#quote" class="inline-flex justify-center items-center px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 shadow-lg transition-all w-full sm:w-auto" onclick="document.getElementById('modal-camden').close()">Get a Quote</a>
+            <a href="#quote" class="inline-flex justify-center items-center px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 shadow-lg transition-all w-full sm:w-auto" onclick="event.preventDefault(); document.getElementById('modal-camden').close(); document.getElementById('modal-quote').showModal();">Get a Quote</a>
           </div>
         </div>
       </div>
@@ -403,7 +399,7 @@ const schema = {
           <p class="text-xl text-blue-600 font-medium mb-8">Sales Representative</p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+15550198472" class="inline-flex justify-center items-center px-6 py-3 border-2 border-blue-600 text-blue-600 font-bold rounded-lg hover:bg-blue-50 transition-colors w-full sm:w-auto">Call Now</a>
-            <a href="#quote" class="inline-flex justify-center items-center px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 shadow-lg transition-all w-full sm:w-auto" onclick="document.getElementById('modal-bruce').close()">Get a Quote</a>
+            <a href="#quote" class="inline-flex justify-center items-center px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 shadow-lg transition-all w-full sm:w-auto" onclick="event.preventDefault(); document.getElementById('modal-bruce').close(); document.getElementById('modal-quote').showModal();">Get a Quote</a>
           </div>
         </div>
       </div>
